@@ -22,7 +22,7 @@ library(ggplot2)
 # ------------------------------------------------------------------------
 # Plots
 # ------------------------------------------------------------------------
-greyHistogramFacet <- function(dataSet, xVar, facetVar) {
+irisgreyHistogramFacet <- function(dataSet, xVar, facetVar) {
   backgroundData <- select(dataSet, -one_of(facetVar))
   ggplot(dataSet, aes_string(x = xVar)) +
     geom_histogram(data = backgroundData, fill = "grey", alpha = .5) +
